@@ -1,0 +1,16 @@
+
+<!--Associando uma propiedade a outra com o property biding do pai-ts para o filho o html-->
+<input type="text"
+ [value]="placeHolder"
+ (input)="placeHolder = $any($event.target).value"
+>
+<!--Este any é qualquer propiedade java dentro do html-->
+<!--Acima input é uma ação adicionar html filho vai conversar com o pai o ts-->
+<p>{{placeHolder}}</p>
+
+<input type="text"
+ [(ngModel)]="placePass"
+>
+<!--diretiva do angular-->
+<p [style.color]="color">{{placePass}}</p>
+<!--Associando uma propiedade de outro lugar passando um estilo style.propiedadecss-->
